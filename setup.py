@@ -13,7 +13,7 @@ def get_requirements(file_path:str)->List[str]:
         requirements=[req.replace("\n","") for req in requirements]  #As while reading from requirements.txt it will pickup line changes i.e. "\n"
         if HYPEN_E_DOT in requirements:
             requirements.remove(HYPEN_E_DOT)                           #As while reading from requirements.txt it will pickup -e . which is basically used to call setup.py automatically
-
+    return requirements
 
 
 setup(
